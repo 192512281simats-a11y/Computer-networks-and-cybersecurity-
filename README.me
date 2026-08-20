@@ -1,229 +1,1021 @@
-Title:       Nivedha.p(192512281)
 
 ENDPOINT SECURITY MONITORING USING WINDOWS DEFENDER
 
+
+
 1. Introduction
+
+
 
 Nowadays, computers and laptops are exposed to many different cyber threats such as viruses, malware, spyware, ransomware, and other harmful programs. Because of this, protecting the endpoint device is an important part of cybersecurity.
 
+
+
 Windows has a built-in security application called Windows Security, which includes Microsoft Defender Antivirus. It helps protect the computer by checking files and applications, providing real-time protection, detecting threats, and performing security scans.
+
+
+
+For organizations, Microsoft Defender for Endpoint provides more advanced features for monitoring devices, detecting suspicious activities, investigating threats, and responding to security incidents.
+
+
+
+---
+
+
 
 2. Aim
 
-To study and perform basic endpoint security monitoring using Windows Defender by checking the security settings.
+
+
+To study and perform basic endpoint security monitoring using Windows Defender by checking the security settings, scanning the computer, checking protection history, and monitoring the firewall and Defender status.
+
+
+
+---
+
+
 
 3. Objectives
 
+
+
 The main objectives of this practical are:
 
+
+
 - To understand the basic concept of endpoint security.
+
 - To learn about Microsoft Defender Antivirus.
+
 - To check whether real-time protection is enabled.
+
 - To perform a security scan on a Windows computer.
+
 - To check the protection history for detected threats.
+
 - To check the Windows Defender Firewall status.
+
 - To use PowerShell to check Defender's security status.
+
 - To understand how Windows Defender helps protect a computer.
+
+
+
+---
+
 
 
 4. Tools Required
 
+
+
 Tool| Purpose
-Windows 10/11 Computer:- Used as the endpoint device
-Windows Security:- Used to manage security settings
-Microsoft Defender Antivirus:- Used for malware protection
-Windows Defender Firewall:-Used for network protection
-PowerShell:-Used to check Defender status
-Internet Connection:- Used for security and definition updates
+
+Windows 10/11 Computer| Used as the endpoint device
+
+Windows Security| Used to manage security settings
+
+Microsoft Defender Antivirus| Used for malware protection
+
+Windows Defender Firewall| Used for network protection
+
+PowerShell| Used to check Defender status
+
+Internet Connection| Used for security and definition updates
+
+
+
+---
+
 
 
 5. What is Endpoint Security?
 
+
+
 Endpoint security means protecting devices such as computers, laptops, and workstations from cyber threats.
+
+
 
 These devices can become an entry point for attackers if they are not properly protected. Endpoint security helps detect harmful programs, prevent unauthorized activities, and protect important files and information.
 
+
+
 In this practical, Windows Defender is used to monitor the security condition of a Windows computer.
 
+
+
 The basic process is:
+
+
 
 Endpoint → Monitoring → Threat Detection → Alert → Investigation → Response
 
 
+
+---
+
+
+
 6. What is Microsoft Defender?
+
+
 
 Microsoft Defender Antivirus is the antivirus protection that comes with Windows. It checks files, applications, and other activities on the computer to identify possible threats.
 
+
+
 It provides features such as real-time protection, malware scanning, threat detection, and quarantine of detected harmful files.
+
+
+
+One useful feature is that it works in the background, so the user does not have to manually check every file before opening it.
+
+
+
+---
+
+
 
 7. Windows Security
 
+
+
 Windows Security is the application used to access the main security features of Windows.
+
+
 
 Some of its important sections are:
 
+
+
 Virus & threat protection
+
+
 
 This section is used to check antivirus protection and perform different types of scans.
 
+
+
 Firewall & network protection
+
+
 
 This section shows the status of the Windows Firewall and provides information about network protection.
 
+
+
 App & browser control
+
+
 
 This helps protect the computer from potentially unsafe applications, files, and websites.
 
+
+
 Device security
+
+
 
 This section provides information about the security features available on the computer's hardware.
 
+
+
 Device performance & health
+
+
 
 This provides information about the general health and performance of the Windows device.
 
 
+
+---
+
+
+
 8. Real-Time Protection
+
+
 
 Real-time protection is one of the important features of Microsoft Defender.
 
+
+
 It continuously checks files, applications, and activities while the computer is being used. If Defender finds something suspicious, it can warn the user and take protective action.
+
+
+
+Keeping real-time protection enabled helps provide continuous protection instead of relying only on manual scans.
+
+
+
+---
+
+
 
 9. Security Scanning
 
+
+
 Windows Defender provides different options for scanning the computer.
+
+
 
 Quick Scan
 
+
+
 A Quick Scan checks the common areas of the computer where threats are more likely to be found. It is useful when we want to perform a quick security check.
+
+
 
 Full Scan
 
+
+
 A Full Scan checks the computer more thoroughly. Since it checks more files and locations, it usually takes more time.
+
+
 
 Custom Scan
 
+
+
 A Custom Scan can be used when we want to check a particular file, folder, or location.
+
+
 
 In this practical, a Quick Scan is performed to check the current security condition of the computer.
 
 
+
+---
+
+
+
 10. Protection History
+
+
 
 Protection History shows the security actions taken by Windows Defender.
 
+
+
 It can show information about detected threats, blocked files, potentially unwanted applications, and other security-related actions.
+
+
 
 Checking Protection History helps the user understand whether Defender has recently detected or blocked anything suspicious.
 
+
+
+---
+
+
+
 11. Windows Defender Firewall
+
+
 
 Windows Defender Firewall helps protect the computer from unauthorized network connections.
 
+
+
 It monitors network traffic going into and out of the computer and applies the configured firewall rules.
 
-Checking the firewall status is important because antivirus protection alone is not enough. 
+
+
+Checking the firewall status is important because antivirus protection alone is not enough. Network protection is also needed to reduce the chances of unauthorized access.
+
+
+
+---
+
 
 
 12. PowerShell Monitoring
 
+
+
 PowerShell can also be used to check the status of Microsoft Defender.
+
+
 
 The following command is used:
 
+
+
 Get-MpComputerStatus
 
+
+
 After running the command, information about Defender's services and protection features is displayed.
+
+
 
 This provides a simple way to check whether important Defender components are running properly.
 
 
+
+---
+
+
+
 13. Endpoint Security Monitoring Workflow
 
+
+
 Windows Computer
+
        ↓
+
 Windows Security
+
        ↓
+
 Microsoft Defender
+
        ↓
+
 Security Monitoring
+
        ↓
+
 Threat Detection
+
        ↓
+
 Security Alert
+
        ↓
+
 Investigation
+
        ↓
+
 Response / Protection
 
-This workflow shows how a Windows endpoint can be monitored. 
+
+
+This workflow shows how a Windows endpoint can be monitored. If Defender detects a possible threat, an alert can be generated and appropriate action can be taken.
+
+
+
+---
+
+
 
 14. Importance of Endpoint Security Monitoring
 
+
+
 Endpoint monitoring is important because computers are frequently targeted by cyber threats.
+
+
 
 It helps us:
 
+
+
 - Detect malware and suspicious activities.
+
 - Check whether antivirus protection is working.
+
 - Identify security problems.
+
 - Monitor firewall protection.
+
 - Protect important files and information.
+
 - Respond to detected threats.
+
 - Improve the overall security of the computer.
+
+
+
+---
+
 
 
 15. Advantages of Microsoft Defender
 
+
+
 Some of the main advantages of Microsoft Defender are:
 
+
+
 - It is built into Windows.
+
 - It provides real-time protection.
+
 - It supports different types of security scans.
+
 - It helps detect malware and other threats.
+
 - It provides firewall and network protection.
+
 - It keeps a record of security actions in Protection History.
+
 - Its status can be checked using PowerShell.
+
 - It provides useful basic protection without requiring a separate antivirus program.
+
+
+
+---
 
 
 
 16. Limitations
 
+
+
 Microsoft Defender provides useful protection, but no antivirus solution can guarantee complete protection from every cyberattack.
+
+
 
 The user should also keep Windows updated, avoid suspicious files and links, use strong passwords, and follow safe cybersecurity practices.
 
 
+
+In organizations, additional security tools and properly configured Microsoft Defender for Endpoint features may be required for advanced monitoring and incident response.
+
+
+
+---
+
+
+
 17. Practical Work
+
+
 
 The following activities were performed as part of the practical:
 
+
+
 1. Opened Windows Security.
+
 2. Checked Virus & threat protection.
+
 3. Checked the Real-Time Protection status.
+
 4. Performed a Quick Scan.
+
 5. Checked Protection History.
+
 6. Checked Firewall & network protection.
+
 7. Used PowerShell to check the Microsoft Defender status.
+
 8. Recorded the observations and results.
+
+
 
 Screenshots of each step are included in the practical section to show the actual monitoring process.
 
+
+
+---
+
+
+
 18. Result
+
+
 
 The security status of the Windows computer was successfully checked using Windows Security and Microsoft Defender.
 
-The real-time protection, security scan, Protection History, firewall status, and Defender status were examined during the practical. 
+
+
+The real-time protection, security scan, Protection History, firewall status, and Defender status were examined during the practical. The observations were recorded along with screenshots.
+
+
+
+---
 
 
 
 19. Conclusion
 
+
+
 Through this practical, I learned how Windows Defender can be used to monitor and protect a computer from common security threats.
 
+
+
 I checked the antivirus protection, performed a security scan, examined the Protection History, checked the firewall, and used PowerShell to view the Defender status.
+
+
 
 This practical helped me understand that endpoint security is not only about detecting viruses. It also involves continuously monitoring the computer, checking security settings, identifying suspicious activities, and taking suitable action when a threat is found.
 
 
+
+Overall, Microsoft Defender and Windows Security provide useful built-in security features for protecting and monitoring Windows endpoints.ENDPOINT SECURITY MONITORING USING WINDOWS DEFENDER
+
+
+
+1. Introduction
+
+
+
+Nowadays, computers and laptops are exposed to many different cyber threats such as viruses, malware, spyware, ransomware, and other harmful programs. Because of this, protecting the endpoint device is an important part of cybersecurity.
+
+
+
+Windows has a built-in security application called Windows Security, which includes Microsoft Defender Antivirus. It helps protect the computer by checking files and applications, providing real-time protection, detecting threats, and performing security scans.
+
+
+
+For organizations, Microsoft Defender for Endpoint provides more advanced features for monitoring devices, detecting suspicious activities, investigating threats, and responding to security incidents.
+
+
+
+---
+
+
+
+2. Aim
+
+
+
+To study and perform basic endpoint security monitoring using Windows Defender by checking the security settings, scanning the computer, checking protection history, and monitoring the firewall and Defender status.
+
+
+
+---
+
+
+
+3. Objectives
+
+
+
+The main objectives of this practical are:
+
+
+
+- To understand the basic concept of endpoint security.
+
+- To learn about Microsoft Defender Antivirus.
+
+- To check whether real-time protection is enabled.
+
+- To perform a security scan on a Windows computer.
+
+- To check the protection history for detected threats.
+
+- To check the Windows Defender Firewall status.
+
+- To use PowerShell to check Defender's security status.
+
+- To understand how Windows Defender helps protect a computer.
+
+
+
+---
+
+
+
+4. Tools Required
+
+
+
+Tool| Purpose
+
+Windows 10/11 Computer| Used as the endpoint device
+
+Windows Security| Used to manage security settings
+
+Microsoft Defender Antivirus| Used for malware protection
+
+Windows Defender Firewall| Used for network protection
+
+PowerShell| Used to check Defender status
+
+Internet Connection| Used for security and definition updates
+
+
+
+---
+
+
+
+5. What is Endpoint Security?
+
+
+
+Endpoint security means protecting devices such as computers, laptops, and workstations from cyber threats.
+
+
+
+These devices can become an entry point for attackers if they are not properly protected. Endpoint security helps detect harmful programs, prevent unauthorized activities, and protect important files and information.
+
+
+
+In this practical, Windows Defender is used to monitor the security condition of a Windows computer.
+
+
+
+The basic process is:
+
+
+
+Endpoint → Monitoring → Threat Detection → Alert → Investigation → Response
+
+
+
+---
+
+
+
+6. What is Microsoft Defender?
+
+
+
+Microsoft Defender Antivirus is the antivirus protection that comes with Windows. It checks files, applications, and other activities on the computer to identify possible threats.
+
+
+
+It provides features such as real-time protection, malware scanning, threat detection, and quarantine of detected harmful files.
+
+
+
+One useful feature is that it works in the background, so the user does not have to manually check every file before opening it.
+
+
+
+---
+
+
+
+7. Windows Security
+
+
+
+Windows Security is the application used to access the main security features of Windows.
+
+
+
+Some of its important sections are:
+
+
+
+Virus & threat protection
+
+
+
+This section is used to check antivirus protection and perform different types of scans.
+
+
+
+Firewall & network protection
+
+
+
+This section shows the status of the Windows Firewall and provides information about network protection.
+
+
+
+App & browser control
+
+
+
+This helps protect the computer from potentially unsafe applications, files, and websites.
+
+
+
+Device security
+
+
+
+This section provides information about the security features available on the computer's hardware.
+
+
+
+Device performance & health
+
+
+
+This provides information about the general health and performance of the Windows device.
+
+
+
+---
+
+
+
+8. Real-Time Protection
+
+
+
+Real-time protection is one of the important features of Microsoft Defender.
+
+
+
+It continuously checks files, applications, and activities while the computer is being used. If Defender finds something suspicious, it can warn the user and take protective action.
+
+
+
+Keeping real-time protection enabled helps provide continuous protection instead of relying only on manual scans.
+
+
+
+---
+
+
+
+9. Security Scanning
+
+
+
+Windows Defender provides different options for scanning the computer.
+
+
+
+Quick Scan
+
+
+
+A Quick Scan checks the common areas of the computer where threats are more likely to be found. It is useful when we want to perform a quick security check.
+
+
+
+Full Scan
+
+
+
+A Full Scan checks the computer more thoroughly. Since it checks more files and locations, it usually takes more time.
+
+
+
+Custom Scan
+
+
+
+A Custom Scan can be used when we want to check a particular file, folder, or location.
+
+
+
+In this practical, a Quick Scan is performed to check the current security condition of the computer.
+
+
+
+---
+
+
+
+10. Protection History
+
+
+
+Protection History shows the security actions taken by Windows Defender.
+
+
+
+It can show information about detected threats, blocked files, potentially unwanted applications, and other security-related actions.
+
+
+
+Checking Protection History helps the user understand whether Defender has recently detected or blocked anything suspicious.
+
+
+
+---
+
+
+
+11. Windows Defender Firewall
+
+
+
+Windows Defender Firewall helps protect the computer from unauthorized network connections.
+
+
+
+It monitors network traffic going into and out of the computer and applies the configured firewall rules.
+
+
+
+Checking the firewall status is important because antivirus protection alone is not enough. Network protection is also needed to reduce the chances of unauthorized access.
+
+
+
+---
+
+
+
+12. PowerShell Monitoring
+
+
+
+PowerShell can also be used to check the status of Microsoft Defender.
+
+
+
+The following command is used:
+
+
+
+Get-MpComputerStatus
+
+
+
+After running the command, information about Defender's services and protection features is displayed.
+
+
+
+This provides a simple way to check whether important Defender components are running properly.
+
+
+
+---
+
+
+
+13. Endpoint Security Monitoring Workflow
+
+
+
+Windows Computer
+
+       ↓
+
+Windows Security
+
+       ↓
+
+Microsoft Defender
+
+       ↓
+
+Security Monitoring
+
+       ↓
+
+Threat Detection
+
+       ↓
+
+Security Alert
+
+       ↓
+
+Investigation
+
+       ↓
+
+Response / Protection
+
+
+
+This workflow shows how a Windows endpoint can be monitored. If Defender detects a possible threat, an alert can be generated and appropriate action can be taken.
+
+
+
+---
+
+
+
+14. Importance of Endpoint Security Monitoring
+
+
+
+Endpoint monitoring is important because computers are frequently targeted by cyber threats.
+
+
+
+It helps us:
+
+
+
+- Detect malware and suspicious activities.
+
+- Check whether antivirus protection is working.
+
+- Identify security problems.
+
+- Monitor firewall protection.
+
+- Protect important files and information.
+
+- Respond to detected threats.
+
+- Improve the overall security of the computer.
+
+
+
+---
+
+
+
+15. Advantages of Microsoft Defender
+
+
+
+Some of the main advantages of Microsoft Defender are:
+
+
+
+- It is built into Windows.
+
+- It provides real-time protection.
+
+- It supports different types of security scans.
+
+- It helps detect malware and other threats.
+
+- It provides firewall and network protection.
+
+- It keeps a record of security actions in Protection History.
+
+- Its status can be checked using PowerShell.
+
+- It provides useful basic protection without requiring a separate antivirus program.
+
+
+
+---
+
+
+
+16. Limitations
+
+
+
+Microsoft Defender provides useful protection, but no antivirus solution can guarantee complete protection from every cyberattack.
+
+
+
+The user should also keep Windows updated, avoid suspicious files and links, use strong passwords, and follow safe cybersecurity practices.
+
+
+
+In organizations, additional security tools and properly configured Microsoft Defender for Endpoint features may be required for advanced monitoring and incident response.
+
+
+
+17. Practical Work
+
+
+
+The following activities were performed as part of the practical:
+
+
+
+1. Opened Windows Security.
+
+2. Checked Virus & threat protection.
+
+3. Checked the Real-Time Protection status.
+
+4. Performed a Quick Scan.
+
+5. Checked Protection History.
+
+6. Checked Firewall & network protection.
+
+7. Used PowerShell to check the Microsoft Defender status.
+
+8. Recorded the observations and results.
+
+
+
+Screenshots of each step are included in the practical section to show the actual monitoring process.
+
+
+
+---
+
+
+
+18. Result
+
+
+
+The security status of the Windows computer was successfully checked using Windows Security and Microsoft Defender.
+
+
+
+The real-time protection, security scan, Protection History, firewall status, and Defender status were examined during the practical. The observations were recorded along with screenshots.
+
+
+19. Conclusion
+
+
+
+Through this practical, I learned how Windows Defender can be used to monitor and protect a computer from common security threats.
+
+
+
+I checked the antivirus protection, performed a security scan, examined the Protection History, checked the firewall, and used PowerShell to view the Defender status.
+
+
+
+This practical helped me understand that endpoint security is not only about detecting viruses. It also involves continuously monitoring the computer, checking security settings, identifying suspicious activities, and taking suitable action when a threat is found.
+
+
+
+Overall, Microsoft Defender and Windows Security provide useful built-in security features for protecting and monitoring Windows endpoints.
